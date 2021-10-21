@@ -1,8 +1,10 @@
+const backend = "https://bank-back002.herokuapp.com/api";
+
 export const getAllUsers = ()=>{
- return fetch("http://localhost:5050/api/users",{
+ return fetch(backend+"/users",{
      method:"POST",
      headers:{
-         "Access-Control-Allow-Origin":"http://localhost:3000",
+         "Access-Control-Allow-Origin":backend,
          "Access-Control-Allow-Credentials":"true"
      }
  }).then((resp)=>{
@@ -12,10 +14,10 @@ export const getAllUsers = ()=>{
 
 
 export const getAllTransactions = () =>{
-    return fetch("http://localhost:5050/api/transaction/get",{
+    return fetch(backend+"/transaction/get",{
      method:"POST",
      headers:{
-         "Access-Control-Allow-Origin":"http://localhost:3000",
+         "Access-Control-Allow-Origin":backend,
          "Access-Control-Allow-Credentials":"true"
      }
     }).then((resp)=>{
@@ -25,7 +27,7 @@ export const getAllTransactions = () =>{
 
 
 export const makeTransaction = (reqBody)=>{
-    return fetch("http://localhost:5050/api/transaction/make",{
+    return fetch(backend+"/transaction/make",{
         method:"POST",
         headers:{
              Accept:"application/json",
