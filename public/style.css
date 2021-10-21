@@ -1,0 +1,44 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+body{
+    overflow-x: hidden;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-row-rev{
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+.flex-space-around{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.grid-center{
+    display: grid;
+    place-items: center;
+}
+/* Scroll Bar styling */
+::-webkit-scrollbar {
+    width: 0;
+  }
+table, th, td {
+border: 1px solid black;
+padding: 3px;
+}
+
+
+.overflow-y-scroll{
+    overflow-y: scroll;
+}
